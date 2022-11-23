@@ -1,5 +1,3 @@
-from time import sleep
-
 from playwright.sync_api import Page, expect
 
 
@@ -42,4 +40,3 @@ def test_buy_a_jacket(page: Page):
     # expect to see success message
     message = page.locator('//div[@class="checkout-success"]')
     expect(message).to_be_visible()
-    sleep(3)
